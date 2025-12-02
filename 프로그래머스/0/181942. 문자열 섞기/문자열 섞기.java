@@ -1,13 +1,13 @@
 class Solution {
     public String solution(String str1, String str2) {
-        String answer = "";
-        String[] var1 = str1.split("");
-        String[] var2 = str2.split("");
-        int len = str1.length();
-        
-        for(int i = 0; i < len; i++) {
-            answer += var1[i] + var2[i];
+        char[] a = str1.toCharArray();
+        char[] b = str2.toCharArray();
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < a.length; i++) {
+            sb.append(a[i]);
+            sb.append(b[i]);
         }
-        return answer;
+        return sb.toString();
     }
 }
