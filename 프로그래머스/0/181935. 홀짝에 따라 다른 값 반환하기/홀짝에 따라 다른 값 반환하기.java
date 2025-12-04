@@ -1,17 +1,9 @@
 class Solution {
     public int solution(int n) {
-        int answer = 0;
-        
-        if(n % 2 == 0) {
-            for(int i = 0; i <= n; i++){
-                answer += i % 2 == 0 ? Math.pow(i, 2) : 0;
-            }
+        if (n % 2 == 1) {
+            return (n + 1) * (n + 1) / 2 / 2;
         } else {
-            for(int i = 0; i <= n; i++){
-                answer += i % 2 != 0 ? i : 0;
-            }
+            return 4 * n/2 * (n/2 + 1) * (2 * n/2 + 1) / 6;   
         }
-       
-        return answer;
     }
 }
